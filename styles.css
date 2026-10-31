@@ -64,7 +64,7 @@ li a {
 
 li a:hover:not(active) {
     background-color: #38bdf8;
-    color: white;
+    color: #1e293b;
     transform: scale(1.1);
 }  
 li a.active {
@@ -72,7 +72,7 @@ li a.active {
     color: white;
 }
 footer{
-    display: flex;
+    display: grid;
 background-color: #faf8f5;
     height:100px;
     width:100%;
@@ -94,9 +94,9 @@ background-color: #faf8f5;
 }
 .grid_main{
     grid-area:main;
-    background-color: #727272;
+    background-color: #38bdf8;
     font-size:18px;
-    
+    color: rgba(0, 0, 0, 0.67);
     border: 1px solid #faf8f5;
 }
 
@@ -112,37 +112,39 @@ background-color: #faf8f5;
     background-color: #faf8f5;
     color: #1e293b;
     border: 1px solid #03618a;
+    align-content: space-around;
 }
 
 .grid_aristera{
     grid-area: aristera;
-    background-color: #03618a;
-    color: black;
+    background-color: #475569;
+    color: #faf8f5;
     font-size: 12px;
     border: 1px solid #faf8f5;
 }
 .grid_deksiakatw{
     grid-area: deksiakatw;
-    background-color: #38bdf8;
+    background-color: #475569;
     border:1px solid #faf8f5;
-    color:#faf8f5;
+    color:rgba(199, 199, 199, 0.38);
     align-content:space-around;
     font-size: xx-large;
 }
 .grid_template{
     
     display: grid;
-   grid-template-rows: auto repeat(7, 1fr) auto;
+   grid-template-rows: auto repeat(7, 1fr) 250px;
     grid-template-areas:  
   'header header header header header header header'
-        'navigator navigator main main main xwros xwros'
-        'navigator navigator main main main xwros xwros'
+        'navigator navigator navigator navigator navigator navigator navigator'
         'aristera aristera main main main xwros xwros'
         'aristera aristera main main main xwros xwros'
+        'aristera aristera main main main xwros xwros'
         'aristera aristera main main main deksiakatw deksiakatw'
         'aristera aristera main main main deksiakatw deksiakatw'
         'aristera aristera main main main deksiakatw deksiakatw'
-        'footer footer footer footer footer footer footer';
+        'footer footer footer footer footer footer footer'
+        ;
   
         
    /* Το main και τα πλαϊνά έγιναν ορθογώνια */
@@ -185,8 +187,8 @@ img:hover div{
             'main main main'
             'main main main'
             'xwros xwros xwros'
-            'deksiakatw deksiakatw deksiakatw'
             'aristera aristera aristera'
+            'deksiakatw deksiakatw deksiakatw'
             'footer footer footer'
             
     }
